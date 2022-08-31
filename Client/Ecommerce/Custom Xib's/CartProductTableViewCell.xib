@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cartTableViewCell" rowHeight="299" id="KGk-i7-Jjw" customClass="CartProductTableViewCell" customModule="Ecommerce" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="517" height="299"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="517" height="299"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Bra-iT-oHs">
+                        <rect key="frame" x="10" y="21" width="155.5" height="155.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="Bra-iT-oHs" secondAttribute="height" multiplier="1:1" id="RKU-Rf-aMJ"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product TitleProduct TitleProduct TitleProduct TitleProduct TitleProduct TitleProduct Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="onC-hG-MGB">
+                        <rect key="frame" x="175.5" y="21" width="331.5" height="48"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$ 0.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DbJ-WP-ZVJ">
+                        <rect key="frame" x="175.5" y="79" width="41" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                        <color key="textColor" systemColor="systemRedColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" wraps="YES" value="1" minimumValue="1" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="kE1-3c-OK3">
+                        <rect key="frame" x="413" y="114.5" width="94" height="32"/>
+                        <color key="backgroundColor" red="0.91764705879999997" green="0.99607843139999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <connections>
+                            <action selector="updateQuantity:" destination="KGk-i7-Jjw" eventType="valueChanged" id="lac-ur-Bgh"/>
+                        </connections>
+                    </stepper>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Qty" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GgF-DD-erO">
+                        <rect key="frame" x="337.5" y="120" width="27.5" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fsx-Rw-JHf">
+                        <rect key="frame" x="385" y="120" width="8" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eDl-nB-o4Q">
+                        <rect key="frame" x="483.5" y="79.5" width="23.5" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="1"/>
+                        <state key="normal" title="Remove" image="trash.fill" catalog="system"/>
+                        <connections>
+                            <action selector="deleteProduct:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="d1L-9O-Gi9"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <color key="backgroundColor" red="0.91764705879999997" green="0.99607843139999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                <constraints>
+                    <constraint firstItem="GgF-DD-erO" firstAttribute="centerY" secondItem="Fsx-Rw-JHf" secondAttribute="centerY" id="2Un-cv-5hX"/>
+                    <constraint firstItem="Bra-iT-oHs" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.3" constant="0.5" id="A40-TA-UjZ"/>
+                    <constraint firstItem="DbJ-WP-ZVJ" firstAttribute="leading" secondItem="onC-hG-MGB" secondAttribute="leading" id="A4e-oC-0rj"/>
+                    <constraint firstAttribute="trailing" secondItem="onC-hG-MGB" secondAttribute="trailing" constant="10" id="A6I-Y4-LFk"/>
+                    <constraint firstItem="GgF-DD-erO" firstAttribute="centerY" secondItem="kE1-3c-OK3" secondAttribute="centerY" id="Bsa-mE-Eu2"/>
+                    <constraint firstItem="Bra-iT-oHs" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="21" id="LlE-2o-hve"/>
+                    <constraint firstItem="GgF-DD-erO" firstAttribute="top" secondItem="DbJ-WP-ZVJ" secondAttribute="bottom" constant="20" id="OMJ-ga-7dG"/>
+                    <constraint firstItem="onC-hG-MGB" firstAttribute="top" secondItem="Bra-iT-oHs" secondAttribute="top" id="S6F-Fd-hwq"/>
+                    <constraint firstItem="DbJ-WP-ZVJ" firstAttribute="top" secondItem="onC-hG-MGB" secondAttribute="bottom" constant="10" id="U1t-4X-bRK"/>
+                    <constraint firstItem="eDl-nB-o4Q" firstAttribute="trailing" secondItem="kE1-3c-OK3" secondAttribute="trailing" id="ZLY-6h-Pss"/>
+                    <constraint firstItem="Bra-iT-oHs" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="aAk-z8-NL2"/>
+                    <constraint firstItem="kE1-3c-OK3" firstAttribute="trailing" secondItem="onC-hG-MGB" secondAttribute="trailing" id="cV6-B9-Svg"/>
+                    <constraint firstItem="kE1-3c-OK3" firstAttribute="leading" secondItem="Fsx-Rw-JHf" secondAttribute="trailing" constant="20" id="iQM-oc-GWE"/>
+                    <constraint firstItem="DbJ-WP-ZVJ" firstAttribute="centerY" secondItem="eDl-nB-o4Q" secondAttribute="centerY" id="jNh-oS-qz3"/>
+                    <constraint firstItem="Fsx-Rw-JHf" firstAttribute="leading" secondItem="GgF-DD-erO" secondAttribute="trailing" constant="20" id="lst-gN-Pqu"/>
+                    <constraint firstItem="onC-hG-MGB" firstAttribute="leading" secondItem="Bra-iT-oHs" secondAttribute="trailing" constant="10" id="rzC-HX-7N0"/>
+                    <constraint firstItem="kE1-3c-OK3" firstAttribute="centerY" secondItem="Fsx-Rw-JHf" secondAttribute="centerY" id="zLG-uY-aPc"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="price" destination="DbJ-WP-ZVJ" id="LIl-4D-psP"/>
+                <outlet property="productImage" destination="Bra-iT-oHs" id="mi0-6f-8Bf"/>
+                <outlet property="productTitle" destination="onC-hG-MGB" id="ljL-Mw-cAz"/>
+                <outlet property="quantity" destination="Fsx-Rw-JHf" id="HqS-ie-P8q"/>
+                <outlet property="quantityChanger" destination="kE1-3c-OK3" id="vba-mf-rZZ"/>
+            </connections>
+            <point key="canvasLocation" x="278.98550724637681" y="189.17410714285714"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="trash.fill" catalog="system" width="121" height="128"/>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
